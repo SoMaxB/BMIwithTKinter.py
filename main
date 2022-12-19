@@ -21,7 +21,7 @@ def BMI():
 def reset():
     entry1.delete(0, END)
     entry2.delete(0, END)
-    Result.config(text="")
+    Result.configure(text="Result")
 
 frame = customtkinter.CTkFrame(master=root)
 frame.pack(pady=20, padx=40, fill="both", expand=True)
@@ -29,10 +29,10 @@ frame.pack(pady=20, padx=40, fill="both", expand=True)
 label = customtkinter.CTkLabel(master=frame, text="Your BMI", text_font=("Roboto", 24))
 label.pack(pady=12, padx=10)
 
-entry1 = customtkinter.CTkEntry(master=frame, placeholder_text="Your weight")
+entry1 = customtkinter.CTkEntry(master=frame, placeholder_text="Your weight in Kg")
 entry1.pack(pady=12, padx=10)
 
-entry2 = customtkinter.CTkEntry(master=frame, placeholder_text="Your height")
+entry2 = customtkinter.CTkEntry(master=frame, placeholder_text="Your height in Cm")
 entry2.pack(pady=12, padx=10)
 
 button = customtkinter.CTkButton(master=frame, text="Check", command=BMI)
@@ -48,3 +48,4 @@ result = customtkinter.CTkLabel(master=frame, text_color="orange",text="",text_f
 result.pack(pady=12, padx=10)
 
 root.mainloop()
+
